@@ -1,11 +1,12 @@
+import Home from "./pages/Home";
+import { Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">
-      <h1 className="text-5xl font-bold">
-        DSA Visualizer
-      </h1>
-    </div>
-  );
+    <Routes>
+      <Route path="/" element={<Home></Home>}></Route>
+    </Routes>
+   
+  )
 }
 
 export default App;
