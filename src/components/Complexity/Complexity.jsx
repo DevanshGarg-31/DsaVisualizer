@@ -1,4 +1,7 @@
-export default function Complexity() {
+import { algorithmInfo } from "../../algorithms/algoinfo";
+export default function Complexity({selectedAlgorithm}) {
+
+  const info=algorithmInfo[selectedAlgorithm]
   return (
     <>
       <div
@@ -12,22 +15,22 @@ border
 border-slate-700
 "
       >
-        <h2 className="text-xl font-semibold mb-4">Bubble Sort</h2>
+        <h2 className="text-xl font-semibold mb-4">{selectedAlgorithm}</h2>
         <div className="flex justify-between">
           <span>Best</span>
-          <span>O(n)</span>
+          <span>{info.best}</span>
         </div>
         <div className="flex justify-between">
           <span>Average</span>
-          <span>O(n²)</span>
+          <span>{info.average}</span>
         </div>
         <div className="flex justify-between">
           <span>Worst</span>
-          <span>O(n²)</span>
+          <span>{info.worst}</span>
         </div>
         <div className="flex justify-between">
           <span>Space</span>
-          <span>1</span>
+          <span>{info.space}</span>
         </div>
       </div>
     </>

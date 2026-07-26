@@ -1,10 +1,10 @@
 
-export default function ContolPanel({generateArray}){
+export default function ContolPanel({generateArray,startSorting}){
     return (
         <>
         <div className="flex justify-center gap-5 container mx-auto p-2 mt-3 " >
             <button onClick={generateArray} className="border-2 rounded-2xl p-1 w-[100px] bg-sky-300 shadow-md hover:scale-105 transition-all duration-200 ">Generate Array</button>
-            <button  className="border-2  w-[100px] rounded-2xl p-1 bg-green-600 shadow-md hover:scale-105 transition-all duration-200  ">Start</button>
+            <button onClick={startSorting}  className="border-2  w-[100px] rounded-2xl p-1 bg-green-600 shadow-md hover:scale-105 transition-all duration-200  ">Start</button>
             <button  className="border-2  w-[100px] rounded-2xl p-1 bg-yellow-600 shadow-md hover:scale-105 transition-all duration-200  ">Pause</button>
             <button  className="border-2  w-[100px] rounded-2xl p-1 bg-red-600 shadow-md hover:scale-105 transition-all duration-200  ">Reset</button>
         </div>
