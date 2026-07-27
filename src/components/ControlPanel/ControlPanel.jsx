@@ -1,5 +1,5 @@
 
-export default function ContolPanel({generateArray,startSorting}){
+export default function ContolPanel({generateArray,startSorting ,speed,setSpeed,arrSize,setArrSize}){
     return (
         <>
         <div className="flex justify-center gap-5 container mx-auto p-2 mt-3 " >
@@ -11,12 +11,12 @@ export default function ContolPanel({generateArray,startSorting}){
         <div className="flex flex-col items-center text-center mb-2 p-2">
             <div className="font-bold text-white flex gap-1 w-[250px]">
                 <span>Speed</span>
-                <input type="range" min={0} max={100}/>
+                <input type="range" min={0} max={100} value={speed} onChange={(e)=>{setSpeed(e.target.value)}}/>
             </div>
             <div
             className="font-bold text-white flex gap-1 w-[250]">
                 <span>Array Size</span>
-                <input type="number" className="bg-white rounded-2xl w-[200px]" />
+                <input type="number" min={10} max={100} className="bg-sky-500 font-black text-center rounded-2xl w-[200px]" value={arrSize} onChange={(e)=>(setArrSize(Number(e.target.value)))}/>
 
             </div>
         </div>

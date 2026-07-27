@@ -1,4 +1,4 @@
-export default function Visualizer({ newArr }) {
+export default function Visualizer({ newArr, activeBars }) {
   console.log(newArr);
 
   if (newArr.length === 0) {
@@ -28,8 +28,9 @@ export default function Visualizer({ newArr }) {
         {newArr.map((num, index) => (
           <div
             key={index}
-            className="bg-sky-400 w-4 rounded-2xl hover:transition-all
-duration-150"
+            className={`w-4 rounded-2xl transition-all duration-150 ${
+              activeBars.includes(index) ? "bg-yellow-400" : "bg-sky-400"
+            }`}
             style={{ height: `${num}px` }}
           ></div>
         ))}
